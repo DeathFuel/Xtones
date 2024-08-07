@@ -110,7 +110,7 @@ public final class Xtones {
                 .setTranslationKey(ID + '.' + tone)
                 .setCreativeTab(XtonesCreativeTab.instance())
                 .setResistance(3.0F)
-                .setHardness(3.0F);
+                .setHardness(tone.isGlassLike() ? 0.03F : 3.0F);
             registry.register(block);
             BLOCKS.put(tone, block);
         }
